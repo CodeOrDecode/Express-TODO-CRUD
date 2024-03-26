@@ -32,7 +32,7 @@ server.post("/addtodo", (req, res) => {
 })
 
 
-server.post("/updatetodo", (req, res) => {
+server.put("/updatetodo", (req, res) => {
 
     let uodateData = data.map((ele) => {
         if (ele.id % 2 == 0) {
@@ -51,7 +51,7 @@ server.post("/updatetodo", (req, res) => {
 })
 
 
-server.post("/deletetodo", (req, res) => {
+server.delete("/deletetodo", (req, res) => {
 
     let deletetodo = data.filter((ele) => {
         if (ele.status != true) {
